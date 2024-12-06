@@ -2,13 +2,158 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 1rem;
 }
 
-#en-tete {
+body {
+  max-width: 800px;
+  background-color: #f9f9f9;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+header #logo-oscar {
+  height: 80%;
+  width: 80%;
+}
+header #certification {
+  text-align: center;
+  width: 100%;
+}
+header #certification p {
+  background-color: #0f938d;
+  color: white;
+  font-size: 0.6rem;
+  padding: 7px 0;
+  width: 100%;
+}
+
+main #en-tete {
   background-image: url(./img/osteoRDV800x168.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 100%;
 }
 @media (max-width: 400px) {
-  #en-tete {
+  main #en-tete {
     background-image: url(./img/osteoRDV400x120.jpg);
   }
+}
+main #en-tete h1 {
+  color: #0f938d;
+  font-size: 1.7rem;
+  font-weight: 400;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.599);
+  padding: 5px 0;
+}
+main #introduction {
+  padding: 0 30px;
+}
+main #introduction h2, main #introduction ul, main #introduction p {
+  margin-bottom: 20px;
+}
+main #introduction h2 {
+  font-weight: 400;
+}
+main #introduction ul {
+  margin-left: 30px;
+}
+main form {
+  padding: 0 30px;
+}
+main form input:not(input[type=checkbox]), main form select {
+  margin-bottom: 15px;
+  padding: 5px;
+  height: 33px;
+  border: 1px solid rgb(194, 194, 194);
+}
+main form #nom {
+  margin-left: 60px;
+}
+main form #prenom {
+  margin-left: 37px;
+}
+main form #tel {
+  margin-left: 15px;
+}
+main form #courriel {
+  margin-left: 35px;
+}
+main form #date {
+  margin-left: 24px;
+  width: 225px;
+}
+main form input[type=date]::-webkit-datetime-edit-text, main form input[type=date]::-webkit-datetime-edit-month-field, main form input[type=date]::-webkit-datetime-edit-day-field, main form input[type=date]::-webkit-datetime-edit-year-field, main form input[type=date]::-webkit-calendar-picker-indicator {
+  -webkit-appearance: none;
+  display: none;
+  color: transparent;
+}
+main form input[type=time]::-webkit-datetime-edit-text, main form input[type=time]::-webkit-datetime-edit-fields-wrapper, main form input[type=time]::-webkit-calendar-picker-indicator {
+  -webkit-appearance: none;
+  display: none;
+  color: transparent;
+}
+main form #heure {
+  margin-left: 13px;
+  width: 225px;
+}
+main form #tarif {
+  margin: 20px 0 30px 60px;
+  width: 225px;
+}
+main form label[for=coordonnees] {
+  line-height: 2;
+  margin-left: 5px;
+  cursor: pointer;
+}
+main form #submit {
+  margin-top: 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: #0f938d;
+  color: white;
+  font-weight: 600;
+  padding: 0 10px;
+}
+main form #heure, main form #date {
+  cursor: text;
+}
+main form #tarif, main form #submit, main form #coordonnees {
+  cursor: pointer;
+}
+
+footer {
+  background-color: #333947;
+  width: 100%;
+  padding: 15px;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 50px;
+}
+footer img {
+  width: 30%;
+}
+footer #coordonnees-footer {
+  font-size: 0.75rem;
+}
+footer #coordonnees-footer h3, footer #coordonnees-footer a, footer #coordonnees-footer address, footer #coordonnees-footer p {
+  font-size: 0.75rem;
+  line-height: 1.75;
+}
+footer #coordonnees-footer address {
+  font-style: normal;
+}
+footer #coordonnees-footer a {
+  text-decoration: none;
+  color: white;
 }/*# sourceMappingURL=style.css.map */

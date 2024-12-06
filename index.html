@@ -14,7 +14,7 @@
     <body>
 
         <header>
-            <img src="./img/logoCliniqueOscar.jpg" alt="Logo de la clinique osthéopatique Oscar à Strasbourg">
+            <img src="./img/logoCliniqueOscar.jpg" alt="Logo de la clinique osthéopatique Oscar à Strasbourg" id="logo-oscar">
 
             <div id="certification">
                 <p>CERTIFICATION</p>
@@ -26,7 +26,7 @@
         <main>
 
             <section id="en-tete"> <!-- TODO: Mettre l'img en fond de la section + changer qd - 400px -->
-                <h1>Réservez une consulation osthéopatique</h1>
+                <h1>Réservez une consultation osthéopatique</h1>
             </section>
 
             <section id="introduction">
@@ -37,42 +37,42 @@
                     <li>60 € pour 6 séances</li>
                 </ul>
 
-                <p>En clinique les soins sont dispensés par nos étudiants encadrés par des <strong>enseignants ostéopathes professionnels</strong>.</p> <br>
+                <p>En clinique les soins sont dispensés par nos étudiants encadrés par des <strong>enseignants ostéopathes professionnels</strong>.</p>
 
                 <p>Merci de renseigner les champs ci-dessous.</p>
             </section>
 
             <form action="">
                 <label for="nom">Nom</label>
-                <input type="text" name="nom" id="nom" required>
+                <input type="text" name="nom" id="nom" required> <br>
 
                 <label for="prenom">Prénom</label>
-                <input type="text" name="prenom" id="prenom" required>
+                <input type="text" name="prenom" id="prenom" required> <br>
 
                 <label for="tel">Téléphone</label>
-                <input type="tel" name="tel" id="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <input type="tel" name="tel" id="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required> <br>
 
                 <label for="courriel">Courriel</label>
-                <input type="email" name="courriel" id="courriel" pattern=".+@example\.com" required>
+                <input type="email" name="courriel" id="courriel" pattern=".+@example\.com" required> <br>
 
                 <label for="date">Date RDV</label> <!-- TODO: retirer les week-end en JS -->
-                <input type="date" name="date" id="date" required>
+                <input type="date" name="date" id="date" required> <br>
 
                 <label for="heure">Heure RDV</label>
-                <input type="time" name="heure" id="heure" min="9:00" max="17:00" required>
+                <input type="time" name="heure" id="heure" min="9:00" max="17:00" required> <br>
 
                 <label for="tarif">Tarif</label>
                 <select name="tarif" id="tarif">
                     <option value="">-- Choix --</option>
                     <option value="15">15 €</option>
                     <option value="20">20 €</option>
-                    <option value="60">60 €</option>
-                </select>
+                    <option value="60">60 €</option> 
+                </select> <br>
 
                 <input type="checkbox" name="coordonnees" id="coordonnees">
-                <label for="coordonnees">J'autorise la Clinique à utiliser mes coordonnées uniquement pour me contacter et gérer mon rendez-vous.</label>
+                <label for="coordonnees">J'autorise la Clinique à utiliser mes coordonnées uniquement pour me contacter et gérer mon rendez-vous.</label> <br>
 
-                <input type="submit" value="Prendre RDV">
+                <input type="submit" name="submit" id="submit" value="Prendre RDV">
             </form>
 
         </main>
@@ -82,7 +82,7 @@
             <img src="./img/logoEcoleOscar.jpg" alt="Logo de l'école européenne d'ostéopathe Oscar à Strasbourg">
 
             <div id="coordonnees-footer">
-                <h3>ÉCOLE OSCAR</h3>
+                <h3>ÉCOLE OSCAR</h3> <br>
                 <p>
                     Campus Privé d'Alsace <br>
                     <address>24a Rue des Magasins - 67000 Strasbourg</address>

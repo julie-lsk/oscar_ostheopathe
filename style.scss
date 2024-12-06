@@ -1,16 +1,228 @@
+$bleu-turquoise: #0f938d;
+$gris-background: #f9f9f9;
+
 *
 {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
 }
 
-#en-tete
+body
 {
-    background-image: url(./img/osteoRDV800x168.jpg);
+    max-width: 800px;
+    background-color: $gris-background;
+    margin: auto;
+}
 
-    @media (max-width: 400px) 
+header
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 20px;
+
+    #logo-oscar
     {
-        background-image: url(./img/osteoRDV400x120.jpg);
+        height: 80%;
+        width: 80%;
     }
+
+    #certification 
+    {
+        text-align: center;
+        width: 100%;
+
+        p
+        {
+            background-color: $bleu-turquoise;
+            color: white;
+            font-size: 0.6rem;
+            padding: 7px 0;
+            width: 100%;
+        }
+    }
+}
+
+main
+{
+    #en-tete
+    {
+        background-image: url(./img/osteoRDV800x168.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 200px;
+        width: 100%;
+    
+        @media (max-width: 400px) 
+        {
+            background-image: url(./img/osteoRDV400x120.jpg);
+        }
+
+        h1
+        {
+            color: $bleu-turquoise;
+            font-size: 1.7rem;
+            font-weight: 400;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.599);
+            padding: 5px 0;
+        }
+    }
+
+    #introduction
+    {
+        padding: 0 30px;
+
+        h2, ul, p
+        {
+            margin-bottom: 20px;
+        }
+
+        h2
+        {
+            font-weight: 400;
+        }
+
+        ul
+        {
+            margin-left: 30px;
+        }
+    }
+
+    form
+    {
+        padding: 0 30px;
+
+        input:not(input[type="checkbox"]), select
+        {
+            margin-bottom: 15px;
+            padding: 5px;
+            height: 33px;
+            border: 1px solid rgb(194, 194, 194);
+        }
+
+        #nom
+        {
+            margin-left: 60px;
+        }
+
+        #prenom
+        {
+            margin-left: 37px;
+        }
+
+        #tel
+        {
+            margin-left: 15px;
+        }
+
+        #courriel
+        {
+            margin-left: 35px;
+        }
+
+        #date
+        {
+            margin-left: 24px;
+            width: 225px;
+        }
+
+        input[type=date]::-webkit-datetime-edit-text, input[type=date]::-webkit-datetime-edit-month-field, input[type=date]::-webkit-datetime-edit-day-field, input[type=date]::-webkit-datetime-edit-year-field, input[type="date"]::-webkit-calendar-picker-indicator
+        {
+            -webkit-appearance: none;
+            display: none;
+            color: transparent;
+        }
+
+        input[type=time]::-webkit-datetime-edit-text, input[type="time"]::-webkit-datetime-edit-fields-wrapper, input[type="time"]::-webkit-calendar-picker-indicator
+        {
+            -webkit-appearance: none;
+            display: none;
+            color: transparent;
+        }
+
+        #heure
+        {
+            margin-left: 13px;
+            width: 225px;
+        }
+
+        #tarif
+        {
+            margin: 20px 0 30px 60px;
+            width: 225px;
+        }
+
+        label[for="coordonnees"]
+        {
+            line-height: 2;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        #submit
+        {
+            margin-top: 15px;
+            border-radius: 5px;
+            border: none;
+            background-color: $bleu-turquoise;
+            color: white;
+            font-weight: 600;
+            padding: 0 10px;
+        }
+
+        #heure, #date
+        {
+            cursor: text;
+        }
+        
+        #tarif, #submit, #coordonnees
+        {
+            cursor: pointer;
+        }
+    }
+}
+
+footer
+{
+    background-color: #333947;
+    width: 100%;
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+
+    img
+    {
+        width: 30%;
+    }
+
+    #coordonnees-footer
+    {
+        font-size: 0.75rem;
+
+        h3, a, address, p
+        {
+            font-size: 0.75rem;
+            line-height: 1.75;
+        }
+
+        address
+        {
+            font-style: normal;
+        }
+    
+        a
+        {
+            text-decoration: none;
+            color: white;
+        }
+        
+    }
+
 }
