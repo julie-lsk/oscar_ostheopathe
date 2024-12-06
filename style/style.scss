@@ -8,6 +8,11 @@ $gris-background: #f9f9f9;
     padding: 0;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 1rem;
+
+    @media (max-width: 400px)
+    {
+        font-size: 0.95rem;
+    }
 }
 
 body
@@ -24,6 +29,12 @@ header
     gap: 25px;
     margin-bottom: 20px;
 
+    @media (max-width: 400px) 
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
     #logo-oscar
     {
         height: 80%;
@@ -35,6 +46,17 @@ header
         text-align: center;
         width: 100%;
 
+        img
+        {
+            width: 55%;
+            min-width: 150px;
+
+            @media (max-width: 400px)
+            {
+                width: 60%;
+            }
+        }
+
         p
         {
             background-color: $bleu-turquoise;
@@ -42,6 +64,11 @@ header
             font-size: 0.6rem;
             padding: 7px 0;
             width: 100%;
+
+            @media (max-width: 400px)
+            {
+                font-size: 0.5rem;
+            }
         }
     }
 }
@@ -50,7 +77,7 @@ main
 {
     #en-tete
     {
-        background-image: url(./img/osteoRDV800x168.jpg);
+        background-image: url(/img/osteoRDV800x168.jpg);
         background-size: contain;
         background-repeat: no-repeat;
         height: 200px;
@@ -58,7 +85,10 @@ main
     
         @media (max-width: 400px) 
         {
-            background-image: url(./img/osteoRDV400x120.jpg);
+            background-image: url(/img/osteoRDV400x120.jpg);
+            background-size: cover;
+            height: 120px;
+            margin-bottom: 20px;
         }
 
         h1
@@ -69,6 +99,11 @@ main
             text-align: center;
             background-color: rgba(255, 255, 255, 0.599);
             padding: 5px 0;
+
+            @media (max-width: 400px) 
+            {
+                font-size: 1.25rem;
+            }
         }
     }
 
@@ -102,58 +137,104 @@ main
             padding: 5px;
             height: 33px;
             border: 1px solid rgb(194, 194, 194);
+
+            @media (max-width: 400px)
+            {
+                width: 60%; 
+            }
+
+            @media (max-width: 334px)
+            {
+                width: 100%;
+            }
         }
 
         #nom
         {
-            margin-left: 60px;
+            margin-left: 61px;
         }
 
         #prenom
         {
-            margin-left: 37px;
+            margin-left: 40px;
         }
 
         #tel
         {
-            margin-left: 15px;
+            margin-left: 19px;
         }
 
         #courriel
         {
-            margin-left: 35px;
+            margin-left: 37px;
         }
 
         #date
         {
-            margin-left: 24px;
-            width: 225px;
+            margin-left: 26px;
         }
 
-        input[type=date]::-webkit-datetime-edit-text, input[type=date]::-webkit-datetime-edit-month-field, input[type=date]::-webkit-datetime-edit-day-field, input[type=date]::-webkit-datetime-edit-year-field, input[type="date"]::-webkit-calendar-picker-indicator
+        #date, #heure, #tarif
         {
-            -webkit-appearance: none;
-            display: none;
-            color: transparent;
+            width: 30%;
+            min-width: 223px;
+
+            @media (max-width: 400px) 
+            {
+                min-width: 60%;
+            }
+
+            @media (max-width: 334px) 
+            {
+                min-width: 100%;
+            }
         }
 
-        input[type=time]::-webkit-datetime-edit-text, input[type="time"]::-webkit-datetime-edit-fields-wrapper, input[type="time"]::-webkit-calendar-picker-indicator
+        #date, #courriel, #tel, #prenom, #nom
         {
-            -webkit-appearance: none;
-            display: none;
-            color: transparent;
+            @media (max-width: 334px)
+            {
+                margin-left: 0;
+            }
         }
 
         #heure
         {
-            margin-left: 13px;
-            width: 225px;
+            margin-left: 16px;
+
+            @media (max-width: 400px) 
+            {
+                margin-bottom: 30px;
+            }
+
+            @media (max-width: 334px) 
+            {
+                margin-left: 0;
+            }
         }
 
         #tarif
         {
-            margin: 20px 0 30px 60px;
-            width: 225px;
+            margin: 20px 0 30px 63px;
+
+            @media (max-width: 400px) 
+            {
+                margin: 10px 0 30px 0px;
+                width: 92%;
+            }
+
+            @media (max-width: 334px)
+            {
+                width: 100%;
+            }
+        }
+
+        label[for="tarif"]
+        {
+            @media (max-width: 400px) 
+            {
+                margin-top: 30px;
+            }
         }
 
         label[for="coordonnees"]
@@ -172,6 +253,11 @@ main
             color: white;
             font-weight: 600;
             padding: 0 10px;
+
+            @media (max-width: 400px)
+            {
+                width: auto; 
+            }
         }
 
         #heure, #date
@@ -197,9 +283,21 @@ footer
     align-items: center;
     gap: 50px;
 
+    @media (max-width: 400px)
+    {
+        flex-direction: column; 
+        gap: 20px;
+        margin-top: 10px;
+    }
+
     img
     {
         width: 30%;
+
+        @media (max-width: 400px)
+        {
+            width: 70%; 
+        }
     }
 
     #coordonnees-footer
