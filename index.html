@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscar - RDV en ligne</title>
+    <meta name="description" content=""> <!-- TODO: -->
+    <link rel="icon" type="image/x-icon" href="/img/icone_oscar.png">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+    <body>
+
+        <header>
+            <img src="./img/logoCliniqueOscar.jpg" alt="Logo de la clinique osthéopatique Oscar à Strasbourg">
+
+            <div id="certification">
+                <p>CERTIFICATION</p>
+                <img src="./img/sante.jpg" alt="Image de l'agrégation du Ministère des Affaires sociales et de la santé">
+                <p>PRENEZ RENDEZ-VOUS</p>
+            </div>
+        </header>
+
+        <main>
+
+            <section id="en-tete"> <!-- TODO: Mettre l'img en fond de la section + changer qd - 400px -->
+                <h1>Réservez une consulation osthéopatique</h1>
+            </section>
+
+            <section id="introduction">
+                <h2>Chaque consulation dure environ 45 minutes.</h2>
+                <ul>
+                    <li>15 € pour les enfants, les étudiants et mes tarifs réduits</li>
+                    <li>20 € pour le tarif adulte</li>
+                    <li>60 € pour 6 séances</li>
+                </ul>
+
+                <p>En clinique les soins sont dispensés par nos étudiants encadrés par des <strong>enseignants ostéopathes professionnels</strong>.</p> <br>
+
+                <p>Merci de renseigner les champs ci-dessous.</p>
+            </section>
+
+            <form action="">
+                <label for="nom">Nom</label>
+                <input type="text" name="nom" id="nom" required>
+
+                <label for="prenom">Prénom</label>
+                <input type="text" name="prenom" id="prenom" required>
+
+                <label for="tel">Téléphone</label>
+                <input type="tel" name="tel" id="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+                <label for="courriel">Courriel</label>
+                <input type="email" name="courriel" id="courriel" pattern=".+@example\.com" required>
+
+                <label for="date">Date RDV</label> <!-- TODO: retirer les week-end en JS -->
+                <input type="date" name="date" id="date" required>
+
+                <label for="heure">Heure RDV</label>
+                <input type="time" name="heure" id="heure" min="9:00" max="17:00" required>
+
+                <label for="tarif">Tarif</label>
+                <select name="tarif" id="tarif">
+                    <option value="">-- Choix --</option>
+                    <option value="15">15 €</option>
+                    <option value="20">20 €</option>
+                    <option value="60">60 €</option>
+                </select>
+
+                <input type="checkbox" name="coordonnees" id="coordonnees">
+                <label for="coordonnees">J'autorise la Clinique à utiliser mes coordonnées uniquement pour me contacter et gérer mon rendez-vous.</label>
+
+                <input type="submit" value="Prendre RDV">
+            </form>
+
+        </main>
+
+        <footer>
+
+            <img src="./img/logoEcoleOscar.jpg" alt="Logo de l'école européenne d'ostéopathe Oscar à Strasbourg">
+
+            <div id="coordonnees-footer">
+                <h3>ÉCOLE OSCAR</h3>
+                <p>
+                    Campus Privé d'Alsace <br>
+                    <address>24a Rue des Magasins - 67000 Strasbourg</address>
+                    Tel: <a href="tel:">+33 (0)3 88 23 14 14</a> - <a href="mailto:info@ecoleoscar.com">info@ecoleoscar.com</a>
+                </p>
+            </div>
+
+        </footer>
+
+    </body>
+
+</html>

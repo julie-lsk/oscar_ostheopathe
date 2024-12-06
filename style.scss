@@ -1,0 +1,16 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#en-tete
+{
+    background-image: url(./img/osteoRDV800x168.jpg);
+
+    @media (max-width: 400px) 
+    {
+        background-image: url(./img/osteoRDV400x120.jpg);
+    }
+}
