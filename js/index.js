@@ -7,8 +7,11 @@ function verifWE(e)
 
     if([6,0].includes(day))
     {
-        e.preventDefault();
-        this.value = '';
+        e.preventDefault(); 
+        
+        // Remet la date à 0
+        e.target.value = "";
+
         alert("La clinique est ouverte du lundi au vendredi. \nVeuillez sélectionner un autre jour.");
     } 
 };

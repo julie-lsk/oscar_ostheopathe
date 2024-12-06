@@ -60,7 +60,7 @@ header #certification p {
 }
 
 main #en-tete {
-  background-image: url(/img/osteoRDV800x168.jpg);
+  background-image: url(../img/osteoRDV800x168.jpg);
   background-size: contain;
   background-repeat: no-repeat;
   height: 200px;
@@ -68,7 +68,7 @@ main #en-tete {
 }
 @media (max-width: 400px) {
   main #en-tete {
-    background-image: url(/img/osteoRDV400x120.jpg);
+    background-image: url(../img/osteoRDV400x120.jpg);
     background-size: cover;
     height: 120px;
     margin-bottom: 20px;
