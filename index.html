@@ -51,16 +51,26 @@
                 <input type="text" name="prenom" id="prenom" required> <br>
 
                 <label for="tel">Téléphone</label>
-                <input type="tel" name="tel" id="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required> <br>
+                <input type="tel" name="tel" id="tel" pattern="^((\+33|0)[1-9])(\d{2}){4}$" minlength="10" maxlength="10" required> <br>
 
                 <label for="courriel">Courriel</label>
-                <input type="email" name="courriel" id="courriel" pattern=".+@example\.com" required> <br>
+                <input type="email" name="courriel" id="courriel" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required> <br>
 
-                <label for="date">Date RDV</label> <!-- TODO: retirer les week-end en JS -->
-                <input type="date" name="date" id="date" required> <br>
+                <label for="date">Date RDV</label>
+                <input type="date" name="date" id="date" onchange="verifWE(event), verifDate()" required> <br>
 
                 <label for="heure">Heure RDV</label>
-                <input type="time" name="heure" id="heure" min="9:00" max="17:00" required> <br>
+                <select name="heure" id="heure" required>
+                    <option value="">-- Choix --</option>
+                    <option value="09:00">9h - 10h</option>
+                    <option value="10:00">10h - 11h</option>
+                    <option value="11:00">11h - 12h</option>
+                    <option value="12:00">12h - 13h</option>
+                    <option value="13:00">13h - 14h</option>
+                    <option value="14:00">14h - 15h</option>
+                    <option value="15:00">15h - 16h</option>
+                    <option value="16:00">16h - 17h</option>
+                </select> <br>
 
                 <label for="tarif">Tarif</label>
                 <select name="tarif" id="tarif">

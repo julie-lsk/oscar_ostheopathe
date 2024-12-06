@@ -269,6 +269,19 @@ main
         {
             cursor: pointer;
         }
+
+        // input[type=date]::-webkit-datetime-edit-text, input[type=date]::-webkit-datetime-edit-month-field, input[type=date]::-webkit-datetime-edit-day-field, input[type=date]::-webkit-datetime-edit-year-field, input[type="date"]::-webkit-calendar-picker-indicator
+        // {
+        //     -webkit-appearance: none;
+        //     display: none;
+        //     color: transparent;
+        // }
+        // input[type=time]::-webkit-datetime-edit-text, input[type="time"]::-webkit-datetime-edit-fields-wrapper
+        // {
+        //     -webkit-appearance: none;
+        //     display: none;
+        //     color: transparent;
+        // }
     }
 }
 
